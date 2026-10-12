@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Customer account access at Elvy Variety Store.">
+        <title>
+            Order History | Elvy Variety Store
+        </title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="js/products.js" defer>
+        </script>
+        <script src="js/script.js" defer>
+        </script>
+        <script src="js/cart.js" defer>
+        </script>
+        <script src="js/account.js" defer>
+        </script>
+    </head>
+    <body data-page="orders" class="page-orders">
+        <!-- Header -->
+        <a class="skip-link" href="#main-content">
+            Skip to main content
+        </a>
+        <header class="site-header">
+            <div class="container header-content">
+                <!-- Mobile Menu Button -->
+                <button class="menu-button" type="button" aria-controls="main-navigation" aria-expanded="false">
+                    <span class="screen-reader-only control-label menu-label">Open navigation menu</span>
+                    <span class="menu-line">
+                    </span>
+                    <span class="menu-line">
+                    </span>
+                    <span class="menu-line">
+                    </span>
+                </button>
+                <!-- Logo and Brand -->
+                <a class="brand" href="index.html">
+                    <span class="brand-logo">
+                        <img src="images/logo/logo.png" alt="Elvy Variety Store logo">
+                    </span>
+                    <span class="brand-text">
+                        <strong>
+                            ELVY VARIETY STORE
+                        </strong>
+                        <span>
+                            Since 1995
+                        </span>
+                    </span>
+                </a>
+                <!-- Navigation -->
+                <nav id="main-navigation" class="main-navigation">
+                    <a href="index.html" data-page="home" class="nav-link">
+                        Home
+                    </a>
+                    <a href="about.html" data-page="about" class="nav-link">
+                        About
+                    </a>
+                    <a href="shop.html" data-page="shop" class="nav-link">
+                        Shop
+                    </a>
+                    <a href="repair.html" data-page="repair" class="nav-link">
+                        Repair Services
+                    </a>
+                    <a href="contact.html" data-page="contact" class="nav-link">
+                        Contact
+                    </a>
+                </nav>
+                <!-- Search, Account, and Cart -->
+                <div class="header-actions">
+                    <a class="icon-link" href="shop.html#product-search">
+                        <span class="screen-reader-only control-label search-label">Search products</span>
+                        <img src="images/logo/search.png" alt="">
+                    </a>
+                    <a class="icon-link account-link" href="signup.html">
+                        <span class="screen-reader-only control-label account-label">Account</span>
+                        <img src="images/logo/account.png" alt="">
+                    </a>
+                    <a class="icon-link cart-link" href="cart.html">
+                        <span class="screen-reader-only control-label cart-label">Cart, 0 items</span>
+                        <img src="images/logo/cart.png" alt="">
+                        <span class="cart-count" aria-hidden="true" hidden>
+                            0
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <!-- Main Content -->
+        <main id="main-content">
+            <!-- Account Heading -->
+            <section class="page-heading account-heading">
+                <div class="container">
+                    <h1>
+                        MY ACCOUNT
+                    </h1>
+                    <p>
+                        View the fictional sample profile and orders. No real customer information is shown.
+                    </p>
+                </div>
+            </section>
+            <div class="account-layout container">
+                <!-- Account Menu -->
+                <aside class="account-menu">
+                    <h2 id="account-menu-title">
+                        MY ACCOUNT
+                    </h2>
+                    <nav>
+                        <a href="profile.html">
+                            Profile
+                        </a>
+                        <a class="active" href="orders.html">
+                            ORDERS
+                        </a>
+                        <button type="button" data-account-action="address">
+                            Address
+                        </button>
+                        <button type="button" data-account-action="settings">
+                            Account Settings
+                        </button>
+                        <a href="signin.html">
+                            Sign Out
+                        </a>
+                    </nav>
+                    <p id="account-menu-message" class="account-message" role="status" hidden>
+                    </p>
+                </aside>
+                <div class="account-content">
+                    <!-- Order History -->
+                    <section class="account-panel order-history">
+                        <h2 id="order-history-title">
+                            ORDER HISTORY
+                        </h2>
+                        <p class="account-unavailable">
+                            These six orders are fictional sample records, not real customer orders.
+                        </p>
+                        <table class="order-history-table">
+                            <caption class="screen-reader-only">
+                                Fictional sample order history
+                            </caption>
+                            <colgroup>
+                                <col class="history-order-column">
+                                <col class="history-date-column">
+                                <col class="history-item-column">
+                                <col class="history-total-column">
+                                <col class="history-status-column">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">
+                                        ORDER
+                                    </th>
+                                    <th scope="col">
+                                        DATE
+                                    </th>
+                                    <th scope="col">
+                                        ITEM
+                                    </th>
+                                    <th scope="col">
+                                        TOTAL
+                                    </th>
+                                    <th scope="col">
+                                        STATUS
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody id="account-order-history">
+                                <tr>
+                                    <td>
+                                        #0001
+                                    </td>
+                                    <td>
+                                        Aug 20, 2026
+                                    </td>
+                                    <td>
+                                        Gasoline Engine 5HP
+                                    </td>
+                                    <td>
+                                        ₱13,500.00
+                                    </td>
+                                    <td class="status-processing">
+                                        Processing
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        #0002
+                                    </td>
+                                    <td>
+                                        Aug 15, 2026
+                                    </td>
+                                    <td>
+                                        Chain Block 2 Ton
+                                    </td>
+                                    <td>
+                                        ₱10,500.00
+                                    </td>
+                                    <td class="status-completed">
+                                        Completed
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        #0003
+                                    </td>
+                                    <td>
+                                        Aug 10, 2026
+                                    </td>
+                                    <td>
+                                        Pipe Bender 4&quot;
+                                    </td>
+                                    <td>
+                                        ₱20,700.00
+                                    </td>
+                                    <td class="status-completed">
+                                        Completed
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        #0004
+                                    </td>
+                                    <td>
+                                        Aug 05, 2026
+                                    </td>
+                                    <td>
+                                        Plate Compactor 5HP
+                                    </td>
+                                    <td>
+                                        ₱23,100.00
+                                    </td>
+                                    <td class="status-completed">
+                                        Completed
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        #0005
+                                    </td>
+                                    <td>
+                                        Jul 28, 2026
+                                    </td>
+                                    <td>
+                                        Bar Bender 32mm
+                                    </td>
+                                    <td>
+                                        ₱110,000.00
+                                    </td>
+                                    <td class="status-cancelled">
+                                        Cancelled
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        #0006
+                                    </td>
+                                    <td>
+                                        Jul 20, 2026
+                                    </td>
+                                    <td>
+                                        Electric Motor
+                                    </td>
+                                    <td>
+                                        ₱8,500.00
+                                    </td>
+                                    <td class="status-completed">
+                                        Completed
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                </div>
+            </div>
+        </main>
+        <!-- Footer -->
+        <footer class="site-footer">
+            <div class="container footer-grid">
+                <section class="footer-column">
+                    <h2>
+                        ELVY VARIETY STORE
+                    </h2>
+                    <p>
+                        Tools &amp; Equipment
+                    </p>
+                    <p>
+                        Repair Services
+                    </p>
+                    <p>
+                        Since 1995
+                    </p>
+                </section>
+                <nav class="footer-column">
+                    <h2>
+                        QUICK LINKS
+                    </h2>
+                    <a href="index.html">
+                        Home
+                    </a>
+                    <a href="shop.html">
+                        Shop
+                    </a>
+                    <a href="repair.html">
+                        Repair Services
+                    </a>
+                    <a href="signup.html">
+                        Account
+                    </a>
+                </nav>
+                <nav class="footer-column">
+                    <h2>
+                        CUSTOMER SERVICE
+                    </h2>
+                    <a href="contact.html">
+                        Contact us
+                    </a>
+                    <a href="orders.html">
+                        Order Information
+                    </a>
+                    <a href="repair.html">
+                        Repair Services
+                    </a>
+                </nav>
+                <section class="footer-column">
+                    <h2>
+                        FOLLOW US
+                    </h2>
+                    <a href="https://www.facebook.com/elvy.variety/" target="_blank" rel="noopener noreferrer">
+                        <span class="social-item">
+                            <img src="images/logo/facebook.png" alt="">
+                            Facebook
+                        </span>
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                        <span class="social-item">
+                            <img src="images/logo/instagram.png" alt="">
+                            Instagram
+                        </span>
+                    </a>
+                </section>
+            </div>
+            <!-- Business Details for Printing -->
+            <address class="container print-only print-contact">
+                Stall #12 Dau, Mart II Bldg., Mabalacat City, Pampanga
+                <br>
+                0963-259-5702 — Jose · 0909-388-6637 — Elvy
+                <br>
+                0963-031-2920 — Raymond · 0908-680-9102 — Pogs
+                <br>
+                elvy.variety@gmail.com
+                <br>
+                Monday–Saturday: 8:00 AM–5:00 PM · Sunday: 8:00 AM–4:30 PM
+            </address>
+        </footer>
+    </body>
+</html>
