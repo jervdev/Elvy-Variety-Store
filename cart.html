@@ -4,70 +4,43 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Review the products in your Elvy Variety Store cart.">
-        <title>
-            Your Cart | Elvy Variety Store
-        </title>
+        <title>Your Cart | Elvy Variety Store</title>
+        <link rel="icon" href="favicon.ico">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/styles.css">
-        <script src="js/products.js" defer>
-        </script>
-        <script src="js/script.js" defer>
-        </script>
-        <script src="js/cart.js" defer>
-        </script>
+        <script src="js/products.js" defer></script>
+        <script src="js/script.js" defer></script>
+        <script src="js/cart.js" defer></script>
     </head>
-    <body data-page="cart" class="page-cart">
+    <body class="page-cart">
         <!-- Header -->
-        <a class="skip-link" href="#main-content">
-            Skip to main content
-        </a>
+        <a class="skip-link" href="#main-content">Skip to main content</a>
         <header class="site-header">
             <div class="container header-content">
-                <!-- Mobile Menu Button -->
-                <button class="menu-button" type="button" aria-controls="main-navigation" aria-expanded="false">
+                <button class="menu-button" type="button">
                     <span class="screen-reader-only control-label menu-label">Open navigation menu</span>
-                    <span class="menu-line">
-                    </span>
-                    <span class="menu-line">
-                    </span>
-                    <span class="menu-line">
-                    </span>
+                    <span class="menu-line"></span>
+                    <span class="menu-line"></span>
+                    <span class="menu-line"></span>
                 </button>
-                <!-- Logo and Brand -->
                 <a class="brand" href="index.html">
                     <span class="brand-logo">
                         <img src="images/logo/logo.png" alt="Elvy Variety Store logo">
                     </span>
                     <span class="brand-text">
-                        <strong>
-                            ELVY VARIETY STORE
-                        </strong>
-                        <span>
-                            Since 1995
-                        </span>
+                        <strong>ELVY VARIETY STORE</strong>
+                        <span>Since 1995</span>
                     </span>
                 </a>
-                <!-- Navigation -->
                 <nav id="main-navigation" class="main-navigation">
-                    <a href="index.html" data-page="home" class="nav-link">
-                        Home
-                    </a>
-                    <a href="about.html" data-page="about" class="nav-link">
-                        About
-                    </a>
-                    <a href="shop.html" data-page="shop" class="nav-link">
-                        Shop
-                    </a>
-                    <a href="repair.html" data-page="repair" class="nav-link">
-                        Repair Services
-                    </a>
-                    <a href="contact.html" data-page="contact" class="nav-link">
-                        Contact
-                    </a>
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="shop.html" class="nav-link">Shop</a>
+                    <a href="repair.html" class="nav-link">Repair Services</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
                 </nav>
-                <!-- Search, Account, and Cart -->
                 <div class="header-actions">
                     <a class="icon-link" href="shop.html#product-search">
                         <span class="screen-reader-only control-label search-label">Search products</span>
@@ -80,9 +53,7 @@
                     <a class="icon-link cart-link" href="cart.html">
                         <span class="screen-reader-only control-label cart-label">Cart, 0 items</span>
                         <img src="images/logo/cart.png" alt="">
-                        <span class="cart-count" aria-hidden="true" hidden>
-                            0
-                        </span>
+                        <span class="cart-count" hidden>0</span>
                     </a>
                 </div>
             </div>
@@ -90,86 +61,48 @@
         <!-- Main Content -->
         <main class="commerce-background cart-main" id="main-content">
             <div class="container">
-                <h1 class="page-heading">
-                    YOUR CART
-                </h1>
+                <h1 class="page-heading">YOUR CART</h1>
                 <div class="cart-layout">
                     <!-- Cart Products -->
                     <section class="cart-products">
                         <div class="cart-column-labels" id="cart-column-labels" hidden>
-                            <span>
-                                PRODUCT
-                            </span>
-                            <span>
-                                PRICE
-                            </span>
-                            <span>
-                                QUANTITY
-                            </span>
-                            <span>
-                                SUBTOTAL
-                            </span>
-                            <span>
-                                ACTION
-                            </span>
+                            <span>PRODUCT</span>
+                            <span>PRICE</span>
+                            <span>QUANTITY</span>
+                            <span>SUBTOTAL</span>
+                            <span>ACTION</span>
                         </div>
-                        <div id="cart-items">
-                        </div>
+                        <div id="cart-items"></div>
                         <div class="cart-empty" id="cart-empty" role="status">
-                            <h2>
-                                Your cart is empty.
-                            </h2>
-                            <p>
-                                Choose products from the shop to add them to your cart.
-                            </p>
-                            <a class="commerce-button" href="shop.html">
-                                SHOP PRODUCTS
-                            </a>
+                            <h2>Your cart is empty.</h2>
+                            <p>Choose products from the shop to add them to your cart.</p>
+                            <a class="commerce-button" href="shop.html">SHOP PRODUCTS</a>
                         </div>
-                        <p class="commerce-small-note cart-navigation-note" id="cart-navigation-note">
-                            Your cart is carried through website links. It is not saved to an account or between separate visits.
-                        </p>
+                        <p class="commerce-small-note cart-navigation-note" id="cart-navigation-note">Your cart is carried through website links. It is not saved to an account or between separate visits.</p>
                     </section>
                     <!-- Order Summary -->
                     <aside class="commerce-summary cart-summary">
-                        <h2 id="cart-summary-title">
-                            ORDER SUMMARY
-                        </h2>
+                        <h2 id="cart-summary-title">ORDER SUMMARY</h2>
                         <dl class="commerce-summary-lines">
                             <div>
-                                <dt>
-                                    Selected Items
-                                </dt>
-                                <dd id="cart-selected-count">
-                                    0
-                                </dd>
+                                <dt>Selected Items</dt>
+                                <dd id="cart-selected-count">0</dd>
                             </div>
                             <div>
-                                <dt>
-                                    Subtotal
-                                </dt>
-                                <dd id="cart-summary-subtotal">
-                                    ₱0.00
-                                </dd>
+                                <dt>Subtotal</dt>
+                                <dd id="cart-summary-subtotal">₱0.00</dd>
                             </div>
                             <div class="commerce-total">
-                                <dt>
-                                    TOTAL
-                                </dt>
-                                <dd id="cart-total">
-                                    ₱0.00
-                                </dd>
+                                <dt>TOTAL</dt>
+                                <dd id="cart-total">₱0.00</dd>
                             </div>
                         </dl>
-                        <button class="commerce-button" id="cart-checkout" type="button" disabled>
-                            CHECKOUT (0)
-                        </button>
+                        <button class="commerce-button" id="cart-checkout" type="button" disabled>CHECKOUT (0)</button>
                         <a class="commerce-back-link" href="shop.html">
                             <img src="images/logo/arrow.png" alt="">
                             CONTINUE SHOPPING
                         </a>
-                        <p class="commerce-message" id="cart-message" role="status" hidden>
-                        </p>
+                        <p class="commerce-message" id="cart-message" role="status" hidden></p>
                     </aside>
                 </div>
             </div>
@@ -178,54 +111,26 @@
         <footer class="site-footer">
             <div class="container footer-grid">
                 <section class="footer-column">
-                    <h2>
-                        ELVY VARIETY STORE
-                    </h2>
-                    <p>
-                        Tools &amp; Equipment
-                    </p>
-                    <p>
-                        Repair Services
-                    </p>
-                    <p>
-                        Since 1995
-                    </p>
+                    <h2>ELVY VARIETY STORE</h2>
+                    <p>Tools &amp; Equipment</p>
+                    <p>Repair Services</p>
+                    <p>Since 1995</p>
                 </section>
                 <nav class="footer-column">
-                    <h2>
-                        QUICK LINKS
-                    </h2>
-                    <a href="index.html">
-                        Home
-                    </a>
-                    <a href="shop.html">
-                        Shop
-                    </a>
-                    <a href="repair.html">
-                        Repair Services
-                    </a>
-                    <a href="signup.html">
-                        Account
-                    </a>
+                    <h2>QUICK LINKS</h2>
+                    <a href="index.html">Home</a>
+                    <a href="shop.html">Shop</a>
+                    <a href="repair.html">Repair Services</a>
+                    <a href="signup.html">Account</a>
                 </nav>
                 <nav class="footer-column">
-                    <h2>
-                        CUSTOMER SERVICE
-                    </h2>
-                    <a href="contact.html">
-                        Contact us
-                    </a>
-                    <a href="orders.html">
-                        Order Information
-                    </a>
-                    <a href="repair.html">
-                        Repair Services
-                    </a>
+                    <h2>CUSTOMER SERVICE</h2>
+                    <a href="contact.html">Contact us</a>
+                    <a href="orders.html">Order Information</a>
+                    <a href="repair.html">Repair Services</a>
                 </nav>
                 <section class="footer-column">
-                    <h2>
-                        FOLLOW US
-                    </h2>
+                    <h2>FOLLOW US</h2>
                     <a href="https://www.facebook.com/elvy.variety/" target="_blank" rel="noopener noreferrer">
                         <span class="social-item">
                             <img src="images/logo/facebook.png" alt="">

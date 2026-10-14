@@ -3,71 +3,44 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>
-            Repair Services | Elvy Variety Store
-        </title>
+        <title>Repair Services | Elvy Variety Store</title>
+        <link rel="icon" href="favicon.ico">
         <meta name="description" content="Ask Elvy Variety Store about repair availability for selected electric motors, chain hoists, bar benders, and other equipment.">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/styles.css">
-        <script src="js/products.js" defer>
-        </script>
-        <script src="js/script.js" defer>
-        </script>
-        <script src="js/cart.js" defer>
-        </script>
+        <script src="js/products.js" defer></script>
+        <script src="js/script.js" defer></script>
+        <script src="js/cart.js" defer></script>
     </head>
-    <body data-page="repair" class="page-repair">
+    <body class="page-repair">
         <!-- Header -->
-        <a class="skip-link" href="#main-content">
-            Skip to main content
-        </a>
+        <a class="skip-link" href="#main-content">Skip to main content</a>
         <header class="site-header">
             <div class="container header-content">
-                <!-- Mobile Menu Button -->
-                <button class="menu-button" type="button" aria-controls="main-navigation" aria-expanded="false">
+                <button class="menu-button" type="button">
                     <span class="screen-reader-only control-label menu-label">Open navigation menu</span>
-                    <span class="menu-line">
-                    </span>
-                    <span class="menu-line">
-                    </span>
-                    <span class="menu-line">
-                    </span>
+                    <span class="menu-line"></span>
+                    <span class="menu-line"></span>
+                    <span class="menu-line"></span>
                 </button>
-                <!-- Logo and Brand -->
                 <a class="brand" href="index.html">
                     <span class="brand-logo">
                         <img src="images/logo/logo.png" alt="Elvy Variety Store logo">
                     </span>
                     <span class="brand-text">
-                        <strong>
-                            ELVY VARIETY STORE
-                        </strong>
-                        <span>
-                            Since 1995
-                        </span>
+                        <strong>ELVY VARIETY STORE</strong>
+                        <span>Since 1995</span>
                     </span>
                 </a>
-                <!-- Navigation -->
                 <nav id="main-navigation" class="main-navigation">
-                    <a href="index.html" data-page="home" class="nav-link">
-                        Home
-                    </a>
-                    <a href="about.html" data-page="about" class="nav-link">
-                        About
-                    </a>
-                    <a href="shop.html" data-page="shop" class="nav-link">
-                        Shop
-                    </a>
-                    <a href="repair.html" data-page="repair" class="nav-link">
-                        Repair Services
-                    </a>
-                    <a href="contact.html" data-page="contact" class="nav-link">
-                        Contact
-                    </a>
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="shop.html" class="nav-link">Shop</a>
+                    <a href="repair.html" class="nav-link">Repair Services</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
                 </nav>
-                <!-- Search, Account, and Cart -->
                 <div class="header-actions">
                     <a class="icon-link" href="shop.html#product-search">
                         <span class="screen-reader-only control-label search-label">Search products</span>
@@ -80,9 +53,7 @@
                     <a class="icon-link cart-link" href="cart.html">
                         <span class="screen-reader-only control-label cart-label">Cart, 0 items</span>
                         <img src="images/logo/cart.png" alt="">
-                        <span class="cart-count" aria-hidden="true" hidden>
-                            0
-                        </span>
+                        <span class="cart-count" hidden>0</span>
                     </a>
                 </div>
             </div>
@@ -93,72 +64,47 @@
             <section class="repair-hero">
                 <div class="container repair-hero-layout">
                     <div class="service-hero-copy">
-                        <span class="service-accent">
-                        </span>
-                        <h1 class="page-heading">
-                            REPAIR SERVICES
-                        </h1>
-                        <p>
-                            Contact the store to ask about repair availability for your item.
-                        </p>
+                        <span class="service-accent"></span>
+                        <h1 class="page-heading">REPAIR SERVICES</h1>
+                        <p>Contact the store to ask about repair availability for your item.</p>
                     </div>
                     <figure class="repair-hero-image">
                         <img class="repair-service-photo" src="images/services/repair-service.png" alt="A person working on equipment in a repair workshop">
-                        <figcaption class="service-image-caption">
-                            Repair services for selected equipment.
-                        </figcaption>
+                        <figcaption class="service-image-caption">Repair services for selected equipment.</figcaption>
                     </figure>
                 </div>
             </section>
             <!-- Equipment We Service -->
             <section class="equipment-services container">
-                <h2 id="equipment-heading" class="service-section-title">
-                    EQUIPMENT WE SERVICE
-                </h2>
+                <h2 id="equipment-heading" class="service-section-title">EQUIPMENT WE SERVICE</h2>
                 <div class="service-cards">
                     <article class="service-card">
                         <div class="service-card-heading">
                             <img class="service-icon" src="images/services/motor-icon.png" alt="">
-                            <h3>
-                                ELECTRIC MOTORS
-                            </h3>
+                            <h3>ELECTRIC MOTORS</h3>
                         </div>
-                        <p>
-                            Repair services for selected electric motors and related equipment.
-                        </p>
+                        <p>Repair services for selected electric motors and related equipment.</p>
                     </article>
                     <article class="service-card">
                         <div class="service-card-heading">
                             <img class="service-icon" src="images/services/chain-icon.png" alt="">
-                            <h3>
-                                CHAIN HOISTS
-                            </h3>
+                            <h3>CHAIN HOISTS</h3>
                         </div>
-                        <p>
-                            Repair services for selected chain hoists.
-                        </p>
+                        <p>Repair services for selected chain hoists.</p>
                     </article>
                     <article class="service-card">
                         <div class="service-card-heading">
                             <img class="service-icon" src="images/services/gears-icon.png" alt="">
-                            <h3>
-                                BAR BENDERS
-                            </h3>
+                            <h3>BAR BENDERS</h3>
                         </div>
-                        <p>
-                            Repair services for selected bar bending equipment.
-                        </p>
+                        <p>Repair services for selected bar bending equipment.</p>
                     </article>
                     <article class="service-card">
                         <div class="service-card-heading">
                             <img class="service-icon" src="images/services/wrench-icon.png" alt="">
-                            <h3>
-                                OTHER EQUIPMENT
-                            </h3>
+                            <h3>OTHER EQUIPMENT</h3>
                         </div>
-                        <p>
-                            Contact the store to ask if repair service is available for your equipment.
-                        </p>
+                        <p>Contact the store to ask if repair service is available for your equipment.</p>
                     </article>
                 </div>
             </section>
@@ -166,55 +112,34 @@
             <section class="repair-inquiry">
                 <div class="container repair-inquiry-layout">
                     <div class="repair-inquiry-copy">
-                        <h2 id="repair-inquiry-heading" class="service-section-title">
-                            NEED SOMETHING REPAIRED?
-                        </h2>
-                        <p>
-                            Send us the details of the item, or contact the store to ask about repair availability.
-                        </p>
-                        <p>
-                            Repair inquiries may also be made directly through our store or Facebook page.
-                        </p>
+                        <h2 id="repair-inquiry-heading" class="service-section-title">NEED SOMETHING REPAIRED?</h2>
+                        <p>Send us the details of the item, or contact the store to ask about repair availability.</p>
+                        <p>Repair inquiries may also be made directly through our store or Facebook page.</p>
                     </div>
-                    <form class="service-form repair-form" id="repair-form" data-email-form="repair" method="post" novalidate onsubmit="return false;">
+                    <form class="service-form repair-form" id="repair-form" method="post">
                         <fieldset>
-                            <legend class="service-hidden-legend">
-                                Repair inquiry
-                            </legend>
+                            <legend class="service-hidden-legend">Repair inquiry</legend>
                             <div class="service-field">
-                                <label for="repair-name">
-                                    Full Name
-                                </label>
-                                <input id="repair-name" name="name" type="text" autocomplete="name" placeholder="Enter your name" required maxlength="100" class="form-input">
+                                <label for="repair-name">Full Name</label>
+                                <input id="repair-name" name="name" type="text" placeholder="Enter your name" required class="form-input">
                             </div>
                             <div class="service-field">
-                                <label for="repair-phone">
-                                    Contact Number
-                                </label>
-                                <input id="repair-phone" name="phone" type="tel" autocomplete="tel" placeholder="Enter your contact number" required maxlength="24" class="form-input">
+                                <label for="repair-phone">Contact Number</label>
+                                <input id="repair-phone" name="phone" type="tel" placeholder="Enter your contact number" required class="form-input">
                             </div>
                             <div class="service-field">
-                                <label for="repair-equipment">
-                                    Equipment / Item
-                                </label>
-                                <input id="repair-equipment" name="equipment" type="text" placeholder="Example: Electric Motor" required maxlength="150" class="form-input">
+                                <label for="repair-equipment">Equipment / Item</label>
+                                <input id="repair-equipment" name="equipment" type="text" placeholder="Example: Electric Motor" required class="form-input">
                             </div>
                             <div class="service-field">
-                                <label for="repair-problem">
-                                    Describe the Problem
-                                </label>
-                                <textarea id="repair-problem" name="problem" rows="4" placeholder="Tell us what problem you are experiencing..." required maxlength="1500" class="form-input"></textarea>
+                                <label for="repair-problem">Describe the Problem</label>
+                                <textarea id="repair-problem" name="problem" rows="4" placeholder="Tell us what problem you are experiencing..." required class="form-input"></textarea>
                             </div>
                             <div class="service-form-actions">
-                                <button class="button" type="submit">
-                                    SEND INQUIRY
-                                </button>
-                                <button class="button button-secondary" type="reset">
-                                    RESET
-                                </button>
+                                <button class="button" id="repair-submit" type="submit" disabled>SEND INQUIRY</button>
+                                <button class="button button-secondary" type="reset">RESET</button>
                             </div>
-                            <p class="form-status" role="status">
-                            </p>
+                            <p class="form-status" role="status"></p>
                         </fieldset>
                     </form>
                 </div>
@@ -224,54 +149,26 @@
         <footer class="site-footer">
             <div class="container footer-grid">
                 <section class="footer-column">
-                    <h2>
-                        ELVY VARIETY STORE
-                    </h2>
-                    <p>
-                        Tools &amp; Equipment
-                    </p>
-                    <p>
-                        Repair Services
-                    </p>
-                    <p>
-                        Since 1995
-                    </p>
+                    <h2>ELVY VARIETY STORE</h2>
+                    <p>Tools &amp; Equipment</p>
+                    <p>Repair Services</p>
+                    <p>Since 1995</p>
                 </section>
                 <nav class="footer-column">
-                    <h2>
-                        QUICK LINKS
-                    </h2>
-                    <a href="index.html">
-                        Home
-                    </a>
-                    <a href="shop.html">
-                        Shop
-                    </a>
-                    <a href="repair.html">
-                        Repair Services
-                    </a>
-                    <a href="signup.html">
-                        Account
-                    </a>
+                    <h2>QUICK LINKS</h2>
+                    <a href="index.html">Home</a>
+                    <a href="shop.html">Shop</a>
+                    <a href="repair.html">Repair Services</a>
+                    <a href="signup.html">Account</a>
                 </nav>
                 <nav class="footer-column">
-                    <h2>
-                        CUSTOMER SERVICE
-                    </h2>
-                    <a href="contact.html">
-                        Contact us
-                    </a>
-                    <a href="orders.html">
-                        Order Information
-                    </a>
-                    <a href="repair.html">
-                        Repair Services
-                    </a>
+                    <h2>CUSTOMER SERVICE</h2>
+                    <a href="contact.html">Contact us</a>
+                    <a href="orders.html">Order Information</a>
+                    <a href="repair.html">Repair Services</a>
                 </nav>
                 <section class="footer-column">
-                    <h2>
-                        FOLLOW US
-                    </h2>
+                    <h2>FOLLOW US</h2>
                     <a href="https://www.facebook.com/elvy.variety/" target="_blank" rel="noopener noreferrer">
                         <span class="social-item">
                             <img src="images/logo/facebook.png" alt="">
