@@ -484,6 +484,7 @@ section.account-heading p, section.signup-heading p { max-width: none; margin: 0
 .review-rating-stars input { position: absolute; opacity: 0; width: 24px; height: 24px; margin: 0; cursor: pointer; }
 .review-rating-stars img { width: 24px; height: 24px; object-fit: contain; }
 .review-rating-stars label:focus-within { outline: 2px solid var(--red); outline-offset: 3px; }
+.review-half-rating { display: flex; align-items: center; gap: 6px; font-size: 12px; }
 .review-submit-row { display: grid; gap: 8px; }
 .review-submit-row .commerce-button { justify-self: start; min-width: 140px; }
 

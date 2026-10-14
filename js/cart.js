@@ -566,16 +566,52 @@ function elvyCartInitProduct() {
     });
     // This static website cannot save or publish customer reviews.
     var form = document.getElementById("review-form");
-    var ratings = form.querySelectorAll(".form-choice");
+    var ratings = form.querySelectorAll(".review-rating-stars input");
     var stars = form.querySelectorAll(".review-rating-stars img");
-    for (var i = 0; i < ratings.length; i++) {
-        ratings[i].addEventListener("change", function () {
-            for (var j = 0; j < stars.length; j++) {
-                stars[j].src = j < Number(this.value) ? "images/products/star.png" : "images/products/star-outline.png";
-            }
+    var labels = form.querySelectorAll(".review-rating-stars label");
+    var halfStar = document.getElementById("review-half-star");
+    var ratingValue = document.getElementById("review-rating-value");
+    var reviewMessage = document.getElementById("review-message");
+    var selectedRating = 0;
+    function clearReviewMessage() {
+        reviewMessage.textContent = "";
+        reviewMessage.hidden = true;
+    }
+    function selectRating(value) {
+        selectedRating = value;
+        for (var i = 0; i < ratings.length; i++) {
+            var number = i + 1;
+            ratings[i].checked = number === Math.ceil(value);
+            ratings[i].value = String(ratings[i].checked ? value : number);
+            var image = value >= number ? "star.png" : value >= number - 0.5 ? "star-half.png" : "star-outline.png";
+            stars[i].src = "images/products/" + image;
+            var labelValue = ratings[i].checked ? value : number;
+            labels[i].querySelector("span").textContent = labelValue + (labelValue === 1 ? " star" : " stars");
+        }
+        halfStar.disabled = value === 0;
+        halfStar.checked = value % 1 !== 0;
+        ratingValue.textContent = value ? value + " / 5" : "No rating selected";
+        clearReviewMessage();
+    }
+    function prepareStar(index) {
+        function chooseWholeStar() { selectRating(index + 1); }
+        ratings[index].addEventListener("click", chooseWholeStar);
+        ratings[index].addEventListener("change", chooseWholeStar);
+        labels[index].addEventListener("dblclick", function (event) {
+            event.preventDefault();
+            selectRating(index + 0.5);
         });
     }
-    form.addEventListener("input", elvyCartClearError);
+    for (var i = 0; i < ratings.length; i++) { prepareStar(i); }
+    halfStar.addEventListener("change", function () {
+        if (selectedRating) { selectRating(Math.ceil(selectedRating) - (halfStar.checked ? 0.5 : 0)); }
+    });
+    form.addEventListener("reset", function () { selectRating(0); });
+    form.addEventListener("input", function (event) {
+        elvyCartClearError(event);
+        clearReviewMessage();
+    });
+    selectRating(0);
     form.addEventListener("submit", function (event) {
         event.preventDefault();
         if (!validateForm(form)) { return; }
