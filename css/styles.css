@@ -24,14 +24,13 @@ button { font: inherit; cursor: pointer; }
 select { cursor: pointer; }
 button:disabled { cursor: default; opacity: .55; }
 img, video { max-width: 100%; display: block; }
-button, a, input, textarea, select { -webkit-tap-highlight-color: transparent; }
 :focus-visible { outline: 3px solid var(--red); outline-offset: 4px; }
 .container { width: calc(100% - 32px); max-width: 1248px; margin: 0 auto; }
 .button,
 .account-primary-button,
 .commerce-button {
     display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 10px 24px;
-    border: 1px solid var(--deep-navy); border-radius: 6px; background: var(--deep-navy); color: var(--off-white);
+    border: 1px solid transparent; border-radius: 6px; background: var(--deep-navy); color: var(--off-white);
     font-family: "Oswald", "Arial Narrow", sans-serif; font-weight: 600; font-size: 16px; line-height: 1.4; text-align: center;
     text-decoration: none; cursor: pointer;
 }
@@ -41,9 +40,9 @@ button, a, input, textarea, select { -webkit-tap-highlight-color: transparent; }
 .button:hover,
 .account-primary-button:hover,
 .commerce-button:hover {
-    background: #963b33; border-color: #963b33; text-decoration: none;
+    background: #963b33; border-color: transparent; text-decoration: none;
 }
-.button-secondary { color: var(--deep-navy); background: var(--beige); border-color: var(--beige); }
+.button-secondary { color: var(--deep-navy); background: var(--beige); border-color: transparent; }
 .button-secondary:hover, .button-secondary:focus-visible { background: #cbbcaf; }
 .section-title { margin-bottom: 28px; font-size: 24px; line-height: 1.35; font-weight: 700; }
 .section-title::after {
@@ -222,7 +221,7 @@ textarea.form-input { min-height: 100px; vertical-align: top; resize: vertical; 
 .shop-search { flex: 1 1 180px; min-width: 0; position: relative; border-radius: 6px; }
 #product-search {
     min-height: 44px; height: 44px; padding-top: 10px; padding-bottom: 10px; padding-left: 44px; border-color: var(--gray); font-size: 12px;
-    -webkit-appearance: none; appearance: none;
+    appearance: none;
 }
 .shop-search img { position: absolute; top: 50%; left: 14px; width: 20px; height: 20px; transform: translateY(-50%); pointer-events: none; }
 
@@ -233,7 +232,7 @@ textarea.form-input { min-height: 100px; vertical-align: top; resize: vertical; 
 /* Sort By Dropdown */
 .sort-control { position: relative; flex: 0 0 152px; width: 152px; max-width: 100%; min-width: 0; }
 .sort-control select {
-    min-height: 44px; height: 44px; padding: 12px 28px 12px 8px; border-color: var(--gray); font-size: 12px; -webkit-appearance: none;
+    min-height: 44px; height: 44px; padding: 12px 28px 12px 8px; border-color: var(--gray); font-size: 12px;
     appearance: none;
 }
 .sort-control::after {
@@ -439,7 +438,7 @@ section.account-heading p, section.signup-heading p { max-width: none; margin: 0
 .commerce-product-image .image-placeholder small { color: var(--gray); font-size: 11px; }
 .product-gallery .commerce-product-image { height: 256px; }
 .product-gallery figcaption {
-    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap;
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap;
     border: 0;
 }
 .gallery-dots { display: flex; justify-content: center; gap: 6px; margin-top: 5px; height: 8px; }
@@ -460,11 +459,7 @@ section.account-heading p, section.signup-heading p { max-width: none; margin: 0
 .quantity-control button { width: 36px; padding: 0; font-size: 18px; font-weight: 600; }
 .quantity-control input.quantity-input {
     width: 46px; padding: 0; border-left: 1px solid var(--gray); border-right: 1px solid var(--gray); border-radius: 0;
-    appearance: textfield; -moz-appearance: textfield; min-height: 0;
-}
-.quantity-control input::-webkit-inner-spin-button,
-.quantity-control input::-webkit-outer-spin-button {
-    -webkit-appearance: none; margin: 0;
+    appearance: textfield; min-height: 0;
 }
 .quantity-control button:disabled { opacity: 0.4; cursor: default; }
 .commerce-button:disabled { opacity: 0.5; cursor: default; }
