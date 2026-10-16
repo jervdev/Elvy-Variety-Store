@@ -3,9 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Browse tools and equipment at Elvy Variety Store.">
+        <meta name="description" content="View product uses, catalog size labels and prices at Elvy Variety Store. Ask the store to confirm specifications and availability.">
         <title>Product Details | Elvy Variety Store</title>
-        <link rel="icon" href="favicon.ico">
+        <link rel="icon" href="images/favicon.ico">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -81,7 +81,7 @@
                     <div class="product-purchase">
                         <h1 id="product-title">Gasoline Engine 5HP</h1>
                         <p class="product-price" id="product-price">₱13,500.00</p>
-                        <p class="product-description" id="product-description">Gasoline Engine 5HP</p>
+                        <p class="product-description" id="product-description">Gasoline engine for equipment that needs an engine power source.</p>
                         <p class="product-availability">
                             <strong>Availability:</strong>
                             <span class="commerce-stock" id="product-availability">Contact for availability</span>
@@ -99,6 +99,8 @@
                             </button>
                         </div>
                         <button class="commerce-button" type="button" id="product-add-cart">ADD TO CART</button>
+                        <p class="commerce-small-note">Your cart is a request list. The store must confirm stock, prices and delivery before accepting an order. No payment is collected here.</p>
+                        <a class="commerce-back-link" id="product-ask" href="mailto:elvy.variety@gmail.com?subject=Product%20inquiry%3A%20Gasoline%20Engine%205HP">Ask about this product</a>
                         <p class="commerce-message" id="product-cart-message" role="status" hidden></p>
                     </div>
                 </div>
@@ -115,7 +117,7 @@
                     <div class="product-information-grid">
                         <article class="product-information-card">
                             <h3>DESCRIPTION</h3>
-                            <p id="product-long-description">Gasoline Engine 5HP</p>
+                            <p id="product-long-description">Check the shaft connection, mounting points and intended equipment with the store before choosing an engine.</p>
                         </article>
                         <article class="product-information-card">
                             <h3>PRODUCT DETAILS</h3>
@@ -129,21 +131,38 @@
                                     <dd id="product-detail-category">Gasoline Engines</dd>
                                 </div>
                                 <div>
+                                    <dt>Catalog size / rating</dt>
+                                    <dd id="product-detail-label">5 HP</dd>
+                                </div>
+                                <div>
                                     <dt>Availability</dt>
                                     <dd id="product-detail-availability">Contact for availability</dd>
                                 </div>
+                                <div>
+                                    <dt>Exact model &amp; specifications</dt>
+                                    <dd>Confirm with the store.</dd>
+                                </div>
+                                <div>
+                                    <dt>Included accessories</dt>
+                                    <dd>Confirm what is supplied before ordering.</dd>
+                                </div>
+                                <div>
+                                    <dt>Warranty</dt>
+                                    <dd>Ask the store for the applicable terms.</dd>
+                                </div>
                             </dl>
-                            <p class="commerce-small-note">Contact the store to confirm specifications and current stock.</p>
+                            <p class="commerce-small-note">The size / rating is taken from the supplied catalog name. Full manufacturer specifications have not been provided.</p>
                         </article>
                     </div>
                 </div>
             </section>
             <!-- Customer Reviews -->
             <section class="product-reviews container" id="product-reviews">
-                <h2 class="page-heading" id="reviews-title">CUSTOMER REVIEWS</h2>
-                <p class="commerce-small-note">Reviews cannot be saved on this static website.</p>
-                <form class="review-form" id="review-form" method="post">
-                    <h3>LEAVE A REVIEW</h3>
+                <h2 class="page-heading" id="reviews-title">RATINGS &amp; REVIEWS</h2>
+                <p class="commerce-small-note">Customer reviews are not available yet. The optional rating demo does not save or publish reviews.</p>
+                <button class="commerce-button" id="review-demo-toggle" type="button" hidden>TRY RATING DEMO</button>
+                <form class="review-form" id="review-form" method="post" hidden>
+                    <h3>TRY A SAMPLE REVIEW</h3>
                     <fieldset class="review-rating-options">
                         <legend>YOUR RATING</legend>
                         <div class="review-rating-stars">
@@ -182,8 +201,8 @@
                     </fieldset>
                     <label for="review-text">YOUR REVIEW</label>
                     <div class="review-submit-row">
-                        <textarea id="review-text" name="review" placeholder="Write your review here..." rows="2" required minlength="5" class="form-input"></textarea>
-                        <button class="commerce-button" id="review-submit" type="submit" disabled>SUBMIT REVIEW</button>
+                        <textarea id="review-text" name="review" placeholder="Write a sample review" rows="2" required minlength="5" class="form-input"></textarea>
+                        <button class="commerce-button" id="review-submit" type="submit" disabled>TRY REVIEW FORM</button>
                     </div>
                     <p class="commerce-message" id="review-message" role="alert" hidden></p>
                 </form>
@@ -219,7 +238,7 @@
                             Facebook
                         </span>
                     </a>
-                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.instagram.com/christructure" target="_blank" rel="noopener noreferrer">
                         <span class="social-item">
                             <img src="images/logo/instagram.png" alt="">
                             Instagram

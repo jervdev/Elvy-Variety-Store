@@ -114,7 +114,7 @@ function displayShopProducts() {
         shopProducts.appendChild(makeElement("p", "empty-products", "No products match this category or search. Try All Products."));
     }
     document.querySelector("#shop-title").textContent = selectedCategory.toUpperCase();
-    document.querySelector("#shop-results").textContent = matchingProducts.length + " products shown";
+    document.querySelector("#shop-results").textContent = matchingProducts.length + (matchingProducts.length === 1 ? " product shown" : " products shown");
     for (let i = 0; i < categoryButtons.length; i++) {
         const active = categoryButtons[i].textContent.trim() === selectedCategory;
         categoryButtons[i].classList.toggle("active", active);

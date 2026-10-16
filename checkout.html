@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Review your products and delivery information for Elvy Variety Store.">
         <title>Checkout | Elvy Variety Store</title>
-        <link rel="icon" href="favicon.ico">
+        <link rel="icon" href="images/favicon.ico">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -62,6 +62,7 @@
         <main class="commerce-background checkout-main" id="main-content">
             <div class="container">
                 <h1 class="page-heading">CHECKOUT</h1>
+                <p class="commerce-small-note">Prepare an order request, then send it from your email app. The store must confirm stock, prices, delivery and payment arrangements. This page does not place a confirmed order or collect payment.</p>
                 <!-- Checkout Form -->
                 <form class="checkout-layout" id="checkout-form" method="post">
                     <div class="checkout-fields">
@@ -70,15 +71,15 @@
                             <legend>CUSTOMER INFORMATION</legend>
                             <div class="commerce-field">
                                 <label for="checkout-name">Full Name</label>
-                                <input id="checkout-name" name="full-name" type="text" placeholder="Enter your full name" required minlength="2" class="form-input">
+                                <input id="checkout-name" name="full-name" type="text" placeholder="e.g. Juan Dela Cruz" required minlength="2" class="form-input">
                             </div>
                             <div class="commerce-field">
                                 <label for="checkout-contact">Contact Number</label>
-                                <input id="checkout-contact" name="contact" type="tel" placeholder="Enter your contact number" title="Enter a contact number with 7 to 15 digits; spaces, hyphens, and a starting plus sign are allowed." required class="form-input">
+                                <input id="checkout-contact" name="contact" type="tel" placeholder="e.g. 0912 345 6789" title="Enter a contact number with 7 to 15 digits; spaces, hyphens, and a starting plus sign are allowed." required class="form-input">
                             </div>
                             <div class="commerce-field">
                                 <label for="checkout-email">Email</label>
-                                <input id="checkout-email" name="email" type="email" placeholder="Enter your email address" required class="form-input">
+                                <input id="checkout-email" name="email" type="email" placeholder="you@example.com" required class="form-input">
                             </div>
                         </fieldset>
                         <!-- Delivery Address -->
@@ -91,15 +92,15 @@
                             <div class="checkout-address-grid">
                                 <div class="commerce-field">
                                     <label for="checkout-city">City / Municipality</label>
-                                    <input id="checkout-city" name="city" type="text" required class="form-input">
+                                    <input id="checkout-city" name="city" type="text" placeholder="City or municipality" required class="form-input">
                                 </div>
                                 <div class="commerce-field">
                                     <label for="checkout-province">Province</label>
-                                    <input id="checkout-province" name="province" type="text" required class="form-input">
+                                    <input id="checkout-province" name="province" type="text" placeholder="Province" required class="form-input">
                                 </div>
                                 <div class="commerce-field">
                                     <label for="checkout-postal">Postal Code</label>
-                                    <input id="checkout-postal" name="postal-code" type="text" title="Enter a 4-digit postal code." required class="form-input">
+                                    <input id="checkout-postal" name="postal-code" type="text" placeholder="4-digit postal code" title="Enter a 4-digit postal code." required class="form-input">
                                 </div>
                             </div>
                         </fieldset>
@@ -109,7 +110,7 @@
                             <label class="payment-option" for="payment-cash">
                                 <input id="payment-cash" type="radio" name="payment-method" value="cash" checked required class="form-choice">
                                 <span>
-                                    <strong>Cash on Delivery</strong>
+                                    <strong>Request Cash on Delivery</strong>
                                     <small>The store will confirm payment and delivery arrangements.</small>
                                 </span>
                             </label>
@@ -141,7 +142,7 @@
                                 <dd id="checkout-total">₱0.00</dd>
                             </div>
                         </dl>
-                        <button class="commerce-button" id="checkout-submit" type="submit" disabled>PLACE ORDER</button>
+                        <button class="commerce-button" id="checkout-submit" type="submit" disabled>PREPARE EMAIL REQUEST</button>
                         <a class="commerce-back-link" href="cart.html" id="checkout-back">
                             <img src="images/logo/arrow.png" alt="">
                             BACK TO CART
@@ -181,7 +182,7 @@
                             Facebook
                         </span>
                     </a>
-                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.instagram.com/christructure" target="_blank" rel="noopener noreferrer">
                         <span class="social-item">
                             <img src="images/logo/instagram.png" alt="">
                             Instagram

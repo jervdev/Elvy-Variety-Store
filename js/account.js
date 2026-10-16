@@ -116,7 +116,7 @@ function checkSignup(event) {
     } else if (password.value !== confirmPassword.value) {
         showAccountMessage("signup-result", "Your passwords do not match.", confirmPassword);
     } else if (!terms.checked) {
-        showAccountMessage("signup-result", "Please check the Terms and Privacy Policy checkbox.", terms);
+        showAccountMessage("signup-result", "Please check the demo acknowledgment checkbox.", terms);
     } else {
         showAccountMessage("signup-result", "New account registration is currently unavailable. You can use the Sign In page to access the sample account.");
     }

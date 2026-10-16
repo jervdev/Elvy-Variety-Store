@@ -546,11 +546,15 @@ function elvyCartInitProduct() {
     document.getElementById("product-breadcrumb-name").textContent = product.name;
     document.getElementById("product-price").textContent = formatPrice(product.price);
     document.getElementById("product-description").textContent = product.description || product.name;
-    document.getElementById("product-long-description").textContent = product.description || product.name;
+    document.getElementById("product-long-description").textContent = product.details || "Ask the store which product suits your intended task.";
     document.getElementById("product-availability").textContent = product.availability || "Contact the store";
     document.getElementById("product-detail-name").textContent = product.name;
     document.getElementById("product-detail-category").textContent = product.category;
+    document.getElementById("product-detail-label").textContent = product.catalogLabel || "Ask the store";
     document.getElementById("product-detail-availability").textContent = product.availability || "Contact the store";
+    var inquirySubject = "Product inquiry: " + product.name;
+    var inquiryBody = "Hello Elvy Variety Store,\n\nI would like to ask about " + product.name + ".\nPlease confirm current stock, price, exact model and specifications, included accessories, and warranty terms.\n\nMy intended use is: ";
+    document.getElementById("product-ask").href = "mailto:elvy.variety@gmail.com?subject=" + encodeURIComponent(inquirySubject) + "&body=" + encodeURIComponent(inquiryBody);
     document.getElementById("product-image-caption").textContent = product.name;
     elvyCartPhoto(document.getElementById("product-image"), product);
     elvyCartProductQuantity();
@@ -566,6 +570,14 @@ function elvyCartInitProduct() {
     });
     // This static website cannot save or publish customer reviews.
     var form = document.getElementById("review-form");
+    var reviewToggle = document.getElementById("review-demo-toggle");
+    if (reviewToggle) {
+        reviewToggle.hidden = false;
+        reviewToggle.addEventListener("click", function () {
+            form.hidden = !form.hidden;
+            reviewToggle.textContent = form.hidden ? "TRY RATING DEMO" : "HIDE RATING DEMO";
+        });
+    }
     var ratings = form.querySelectorAll(".review-rating-stars input");
     var stars = form.querySelectorAll(".review-rating-stars img");
     var labels = form.querySelectorAll(".review-rating-stars label");

@@ -4,8 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Elvy Variety Store demo signup form with input validation. New account registration is unavailable.">
-        <title>Create an Account | Elvy Variety Store</title>
-        <link rel="icon" href="favicon.ico">
+        <title>Signup Demo | Elvy Variety Store</title>
+        <link rel="icon" href="images/favicon.ico">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -64,31 +64,32 @@
             <!-- Account Heading -->
             <section class="page-heading signup-heading">
                 <div class="container">
-                    <h1>CREATE AN ACCOUNT</h1>
-                    <p>Create an account for a faster and easier shopping experience.</p>
+                    <h1>SIGNUP DEMO</h1>
+                    <p>Try the form validation. No account is created, and your entries are not saved or sent.</p>
                 </div>
             </section>
             <!-- Sign Up Form -->
             <section class="signup-section container">
                 <div class="signup-card">
-                    <h2 id="signup-title">SIGN UP</h2>
+                    <h2 id="signup-title">TRY THE SIGNUP FORM</h2>
+                    <p class="account-unavailable">Use sample details only. Do not enter a password you use elsewhere.</p>
                     <form id="signup-form" method="post">
                         <div class="account-form-field">
                             <label for="signup-name">Full Name</label>
-                            <input id="signup-name" name="fullName" type="text" placeholder="Enter your full name" required class="form-input">
+                            <input id="signup-name" name="fullName" type="text" placeholder="e.g. Juan Dela Cruz" required class="form-input">
                         </div>
                         <div class="account-form-field">
                             <label for="signup-email">Email</label>
-                            <input id="signup-email" name="email" type="email" placeholder="Enter your email address" required class="form-input">
+                            <input id="signup-email" name="email" type="email" placeholder="you@example.com" required class="form-input">
                         </div>
                         <div class="account-form-field">
                             <label for="signup-contact">Contact Number</label>
-                            <input id="signup-contact" name="contact" type="tel" placeholder="Enter your contact number" title="Enter a contact number containing digits, spaces, hyphens, and an optional plus sign." required class="form-input">
+                            <input id="signup-contact" name="contact" type="tel" placeholder="e.g. 0912 345 6789" title="Enter a contact number containing digits, spaces, hyphens, and an optional plus sign." required class="form-input">
                         </div>
                         <div class="account-form-field">
                             <label for="signup-password">Password</label>
                             <div class="password-control">
-                                <input id="signup-password" name="password" type="password" placeholder="Enter your password" required class="form-input password-input">
+                                <input id="signup-password" name="password" type="password" placeholder="Choose a demo password" required class="form-input password-input">
                                 <button class="password-toggle" type="button">
                                     <span class="screen-reader-only control-label password-label">Show password</span>
                                     <img class="password-eye-icon" src="images/icons/eye-open.png" alt="">
@@ -98,7 +99,7 @@
                         <div class="account-form-field">
                             <label for="signup-confirm">Confirm Password</label>
                             <div class="password-control">
-                                <input id="signup-confirm" name="confirmPassword" type="password" placeholder="Re-enter your password" required class="form-input password-input">
+                                <input id="signup-confirm" name="confirmPassword" type="password" placeholder="Repeat demo password" required class="form-input password-input">
                                 <button class="password-toggle" type="button">
                                     <span class="screen-reader-only control-label password-label">Show confirm password</span>
                                     <img class="password-eye-icon" src="images/icons/eye-open.png" alt="">
@@ -107,14 +108,14 @@
                         </div>
                         <label class="account-terms" for="signup-terms">
                             <input id="signup-terms" name="terms" type="checkbox" required class="form-choice">
-                            <span>I agree to the Terms and Privacy Policy.</span>
+                            <span>I understand this is a demo and no account will be created.</span>
                         </label>
-                        <button class="account-primary-button signup-submit" id="signup-submit" type="submit" disabled>CREATE ACCOUNT</button>
+                        <button class="account-primary-button signup-submit" id="signup-submit" type="submit" disabled>CHECK DEMO FORM</button>
                         <p id="signup-result" class="account-message" role="status" hidden></p>
                     </form>
                     <p class="signin-link">
-                        Already have an account?
-                        <a href="signin.html">Sign in</a>
+                        Want to view the sample profile?
+                        <a href="signin.html">Try the sign-in demo</a>
                     </p>
                     <noscript>
                         <p class="account-message">JavaScript is needed for form validation. New account registration is unavailable.</p>
@@ -152,7 +153,7 @@
                             Facebook
                         </span>
                     </a>
-                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.instagram.com/christructure" target="_blank" rel="noopener noreferrer">
                         <span class="social-item">
                             <img src="images/logo/instagram.png" alt="">
                             Instagram

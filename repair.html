@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Repair Services | Elvy Variety Store</title>
-        <link rel="icon" href="favicon.ico">
+        <link rel="icon" href="images/favicon.ico">
         <meta name="description" content="Ask Elvy Variety Store about repair availability for selected electric motors, chain hoists, bar benders, and other equipment.">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -113,33 +113,35 @@
                 <div class="container repair-inquiry-layout">
                     <div class="repair-inquiry-copy">
                         <h2 id="repair-inquiry-heading" class="service-section-title">NEED SOMETHING REPAIRED?</h2>
-                        <p>Send us the details of the item, or contact the store to ask about repair availability.</p>
+                        <p>Tell us the equipment name and problem. The store must confirm repair availability before you bring it in.</p>
                         <p>Repair inquiries may also be made directly through our store or Facebook page.</p>
                     </div>
                     <form class="service-form repair-form" id="repair-form" method="post">
                         <fieldset>
                             <legend class="service-hidden-legend">Repair inquiry</legend>
+                            <p class="account-unavailable">Prepare an email draft, then review and send it in your email app. Nothing is sent automatically.</p>
                             <div class="service-field">
                                 <label for="repair-name">Full Name</label>
-                                <input id="repair-name" name="name" type="text" placeholder="Enter your name" required class="form-input">
+                                <input id="repair-name" name="name" type="text" placeholder="e.g. Juan Dela Cruz" required class="form-input">
                             </div>
                             <div class="service-field">
                                 <label for="repair-phone">Contact Number</label>
-                                <input id="repair-phone" name="phone" type="tel" placeholder="Enter your contact number" required class="form-input">
+                                <input id="repair-phone" name="phone" type="tel" placeholder="e.g. 0912 345 6789" required class="form-input">
                             </div>
                             <div class="service-field">
                                 <label for="repair-equipment">Equipment / Item</label>
-                                <input id="repair-equipment" name="equipment" type="text" placeholder="Example: Electric Motor" required class="form-input">
+                                <input id="repair-equipment" name="equipment" type="text" placeholder="e.g. Electric motor" required class="form-input">
                             </div>
                             <div class="service-field">
                                 <label for="repair-problem">Describe the Problem</label>
-                                <textarea id="repair-problem" name="problem" rows="4" placeholder="Tell us what problem you are experiencing..." required class="form-input"></textarea>
+                                <textarea id="repair-problem" name="problem" rows="4" placeholder="e.g. Motor will not start" required class="form-input"></textarea>
                             </div>
                             <div class="service-form-actions">
-                                <button class="button" id="repair-submit" type="submit" disabled>SEND INQUIRY</button>
+                                <button class="button" id="repair-submit" type="submit" disabled>PREPARE EMAIL</button>
                                 <button class="button button-secondary" type="reset">RESET</button>
                             </div>
                             <p class="form-status" role="status"></p>
+                            <noscript><p>Enable JavaScript to prepare a draft, or email <a href="mailto:elvy.variety@gmail.com">elvy.variety@gmail.com</a>.</p></noscript>
                         </fieldset>
                     </form>
                 </div>
@@ -175,7 +177,7 @@
                             Facebook
                         </span>
                     </a>
-                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.instagram.com/christructure" target="_blank" rel="noopener noreferrer">
                         <span class="social-item">
                             <img src="images/logo/instagram.png" alt="">
                             Instagram
