@@ -75,6 +75,11 @@ section.page-heading {
 .cart-notification.is-visible { display: block; animation: cart-feedback .2s ease-out; }
 @keyframes cart-feedback { from { opacity: .4; } to { opacity: 1; } }
 @media (prefers-reduced-motion: reduce) { .cart-notification.is-visible { animation: none; } }
+/* Page transition */
+@media screen and (prefers-reduced-motion: no-preference) {
+    body > main { animation: page-entry .28s ease-out; }
+}
+@keyframes page-entry { from { opacity: .55; } to { opacity: 1; } }
 fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
 legend { padding: 0; }
 label { display: block; margin-bottom: 8px; }
@@ -120,6 +125,12 @@ textarea.form-input { min-height: 100px; vertical-align: top; resize: vertical; 
 .main-navigation a.active::after {
     content: ""; display: block; width: 30px; height: 3px; background: var(--red); margin-top: 6px; border-radius: 2px;
 }
+.nav-underline {
+    position: absolute; left: 0; top: 0; width: 30px; height: 3px; background: var(--red); border-radius: 2px;
+    opacity: 0; pointer-events: none; transition: left .22s ease-out, top .22s ease-out, opacity .15s ease-out;
+}
+.main-navigation.has-nav-underline a.active::after { display: none; }
+@media (prefers-reduced-motion: reduce) { .nav-underline { transition: none; } }
 
 /* Mobile Home Page - Hero */
 .home-hero { background: linear-gradient(90deg, var(--deep-navy), var(--navy)); color: var(--off-white); }
@@ -781,7 +792,7 @@ section.account-heading p, section.signup-heading p { max-width: none; margin: 0
     .brand-text { display: flex; flex-direction: column; white-space: nowrap; font-size: 14px; }
     .brand-text strong { font-weight: 600; color: var(--deep-navy); }
     .brand-text span { color: var(--red); }
-    .main-navigation { display: flex; position: static; padding: 0; box-shadow: none; gap: 12px; flex-direction: row; }
+    .main-navigation { display: flex; position: relative; inset: auto; padding: 0; box-shadow: none; gap: 12px; flex-direction: row; }
     .main-navigation.is-open { flex-direction: row; display: flex; }
     .main-navigation a { padding: 10px 0; font-size: 14px; position: relative; }
     .main-navigation a.active::after { position: absolute; bottom: 0; left: calc(50% - 15px); }
